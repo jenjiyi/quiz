@@ -6,11 +6,16 @@
 	<link href='http://fonts.googleapis.com/css?family=Ultra' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<!-- core script !-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/quiz.js"></script>
 </head>
 <body>
 	<section class="main">
 		<div class="content">
+			<div id="wrapper">		
 			<header>
 				<a title="By Original uploader and author was Doorstepsnail at en.wikipedia [Public domain], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3AJett_Rocks.jpg"><img width="300" alt="Jett Rocks" src="img/joan.jpg"/></a>
 				<p class="intro">The</p>
@@ -19,12 +24,12 @@
 			</header>
 				<div class="quiz-wrapper">
 					<form id="quiz">
-						<h3>Lorem ipsum dolor sit amet?</h3>
-						<p><input type="radio" name="question"><label for="questionOne">Lorem ipsum</label></p>
-						<p><input type="radio" name="question"><label for="questionTwo">Ut enim ad minim veniam</label></p>
-						<p><input type="radio" name="question"><label for="questionTwo">Duis aute irure dolor in reprehenderit</label></p>
-						<p><input type="radio" name="question"><label for="questionTwo">Excepteur sint occaecat cupidatat</label></p>
-						<p><a href="#" type="submit" class="btn">Next</a></p>
+						<h3>1. Lorem ipsum dolor sit amet?</h3>
+						<p>a. <input type="radio" name="answer" id="answerOne" value="a"><label for="answerOne">Lorem ipsum</label></p>
+						<p>b. <input type="radio" name="answer" id="answerTwo" value="b"><label for="answerTwo">Ut enim ad minim veniam</label></p>
+						<p>c. <input type="radio" name="answer" id="answerThree" value="c"><label for="answerThree">Duis aute irure dolor in reprehenderit</label></p>
+						<p>d. <input type="radio" name="answer" id="answerFour" value="d"><label for="answerFour">Excepteur sint occaecat cupidatat</label></p>
+						<div class="nextBtn"><a href="#" type="submit" class="btn">Next&gt;</a></div><div class="progress"><a href="#" class="btn">Reset</a></div>
 					</form>
 				</div>
 				<div class="results">
@@ -42,13 +47,12 @@
 						<li><i class="fa fa-heart-o fa-3x"></i></li>
 					</ul>
 					<p class="summary"></p>
+					<p><a href="#" class="btn">Try again</a></p>
 				</div>
 			</div>
 		</div>
+		</div>
 	</section>
-	<!-- core script !-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <script src="js/quiz.js"></script>
+	
 </body>
 </html>
