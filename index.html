@@ -25,29 +25,20 @@
 				<div class="quiz-wrapper">
 					<form id="quiz">
 						<h3>1. Lorem ipsum dolor sit amet?</h3>
-						<p>a. <input type="radio" name="answer" id="answerOne" value="a"><label for="answerOne">Lorem ipsum</label></p>
-						<p>b. <input type="radio" name="answer" id="answerTwo" value="b"><label for="answerTwo">Ut enim ad minim veniam</label></p>
-						<p>c. <input type="radio" name="answer" id="answerThree" value="c"><label for="answerThree">Duis aute irure dolor in reprehenderit</label></p>
-						<p>d. <input type="radio" name="answer" id="answerFour" value="d"><label for="answerFour">Excepteur sint occaecat cupidatat</label></p>
-						<div class="nextBtn"><a href="#" type="submit" class="btn">Next&gt;</a></div><div class="progress"><a href="#" class="btn">Reset</a></div>
+						<p><input type="radio" name="answer" id="answerOne" value="0"> a. <label for="answerOne" id="answer">Lorem ipsum</label></p>
+						<p><input type="radio" name="answer" id="answerTwo" value="1"> b. <label for="answerTwo" id="answer">Ut enim ad minim veniam</label></p>
+						<p><input type="radio" name="answer" id="answerThree" value="2"> c. <label for="answerThree" id="answer">Duis aute irure dolor in reprehenderit</label></p>
+						<p><input type="radio" name="answer" id="answerFour" value="3"> d. <label for="answerFour" id="answer">Excepteur sint occaecat cupidatat</label></p>
+						<p class="message-no-guess">Please select an answer before hitting "next" button</p>
+						<div class="nextBtn"><a href="#" type="submit" class="next btn">Next&gt;</a></div><div class="progress"><a href="#" class="reset btn">Reset</a></div>
 					</form>
 				</div>
 				<div class="results">
-					<p>You got <span id="amountRight">8</span> black hearts out of 10</p>
-					<ul>
-						<li><i class="fa fa-heart fa-3x"></i></li>
-						<li><i class="fa fa-heart fa-3x"></i></li>
-						<li><i class="fa fa-heart fa-3x"></i></li>
-						<li><i class="fa fa-heart fa-3x"></i></li>
-						<li><i class="fa fa-heart fa-3x"></i></li>
-						<li><i class="fa fa-heart fa-3x"></i></li>
-						<li><i class="fa fa-heart fa-3x"></i></li>
-						<li><i class="fa fa-heart fa-3x"></i></li>
-						<li><i class="fa fa-heart-o fa-3x"></i></li>
-						<li><i class="fa fa-heart-o fa-3x"></i></li>
+					<p>You got <span id="amountRight"></span> black hearts out of 8</p>
+					<ul class="hearts">
 					</ul>
 					<p class="summary"></p>
-					<p><a href="#" class="btn">Try again</a></p>
+					<p><a href="#" class="reset btn">Try again</a></p>
 				</div>
 			</div>
 		</div>
