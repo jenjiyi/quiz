@@ -128,6 +128,7 @@ $(document).ready (function(){
 		console.log('reset quiz');
 		currentQuestion = 0;
 		numCorrect = 0;
+		$('.message-no-guess').css('display', 'none');
 		nextQuestion();
 		$(".quiz-wrapper").css("display", "block");
 			$(".results").css("display", "none");

@@ -12,9 +12,9 @@ header {
 	text-transform: uppercase;
 	font-family: 'Ultra', serif;
 	line-height: 0em;
-	text-shadow: 3px 3px 1px rgba(104, 3, 3, 1);
+	text-shadow: 2px 2px 0px rgba(3, 3, 3, 1);
 }
-header p.intro{
+header p:first-of-type {
 	 margin: -40px 0 -8px;
 }
 h1{
@@ -30,7 +30,10 @@ header img{
 .content{
 	width: 320px;
 	margin: 0 auto;
+}
+.message-no-guess{
 	display: none;
+	color: #cc0000;
 }
 .btn{
 	border-radius: 2px;
@@ -63,6 +66,9 @@ header img{
 }
 .results{
 	display:none;
+}
+.nextBtn{
+	float: left;
 }
 .progress{
 	float: right;
