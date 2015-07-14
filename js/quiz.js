@@ -20,32 +20,32 @@ $(document).ready (function(){
 		correct: 0
 		},
 		{
-		questions:"4. q3",		
-		answers:["a3", "b3", "c3", "d3"],
+		questions:"When were Joan Jett and the Blackhearts inducted into the Rock 'n Roll Hall of Fame?",		
+		answers:["2013", "1999", "2001", "2015"],
 		qNum: 3,
 		correct: 2
 		},
 		{ 
-		questions:"5. q4",
-		answers:["a4", "b4", "c4", "d4"],
+		questions:"Where was she born?",
+		answers:["Los Angeles, CA", "Cleveland, OH", "Philadelphia, PA", "New York, NY"],
 		qNum: 4,
 		correct: 2
 		},
 		{
-		questions: "6. q5",
-		answers:["a5", "b5", "c5", "d5"],
+		questions: "What is her best selling LP?",
+		answers:["Naked", "I Love Rock 'n' Roll", "Up Your Alley ", "Good Music"],
 		qNum: 5,
 		correct: 1
 		},
 		{ 
-		questions:"7. q6",
-		answers:["a6", "b6", "c6", "d6"],
+		questions:"Which punk rock bands first album did she produce?",
+		answers:["The Germs", "Agent Orange", "Fear", "Crime"],
 		qNum: 6,
 		correct: 0
 		},
 		{
-		questions:"8. q7",
-		answers:["a7", "b7", "c7", "d7"],
+		questions:"Which band let her using their recording studio for her first solo album?",
+		answers:["Heart", "The Sex Pistols", "Alice Cooper", "The Who"],
 		qNum: 7,
 		correct: 3
 		}]
