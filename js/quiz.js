@@ -23,7 +23,7 @@ $(document).ready (function(){
 		questions:"When were Joan Jett and the Blackhearts inducted into the Rock 'n Roll Hall of Fame?",		
 		answers:["2013", "1999", "2001", "2015"],
 		qNum: 3,
-		correct: 2
+		correct: 3
 		},
 		{ 
 		questions:"Where was she born?",
