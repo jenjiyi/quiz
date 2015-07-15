@@ -107,13 +107,15 @@ $(document).ready (function(){
 			$("#answerTwo + label").empty().html(questionList[currentQuestion].answers[1]);
 			$("#answerThree + label").empty().html(questionList[currentQuestion].answers[2]);
 			$("#answerFour + label").empty().html(questionList[currentQuestion].answers[3]);
+			$(".hearts").empty();
 		}
 	}
 
 	//results function,
 	function results(){
-		console.log("results!");
-		$("#amountRight").html(numCorrect);
+		//console.log("results!");
+		if (numCorrect == 1 ){ $("#amountRight").html(numCorrect + " blackheart "); }
+		else {$("#amountRight").html(numCorrect + " blackhearts ");}
 		var numIncorrect = 8 - numCorrect;
 		for (h = 0; h < numCorrect; h++){
 			$('.hearts').append('<li><i class="fa fa-heart fa-3x"></i></li>');
@@ -125,7 +127,7 @@ $(document).ready (function(){
 	}
 	//reset quiz
 	$('.reset').click(function() {
-		console.log('reset quiz');
+		//console.log('reset quiz');
 		currentQuestion = 0;
 		numCorrect = 0;
 		$('.message-no-guess').css('display', 'none');
@@ -137,6 +139,6 @@ $(document).ready (function(){
 //transition animation functions
 	$(window).load(function() {
 		  $(".main").fadeIn(1000); 
-		  //$( ".content" ).show( "slide", 1000 );		 
+		  $( ".content" ).show( "slide", 1000 );		 
 		});
 });
