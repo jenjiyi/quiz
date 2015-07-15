@@ -52,19 +52,25 @@ $(document).ready (function(){
 //declare global vars
 	var numCorrect = 0;
 	var currentQuestion = 0;
-
+//populate questions and answers
+	$("#quiz h3").empty().html(questionList[currentQuestion].questions);
+	$("label").empty().html(questionList[currentQuestion].answers[0]);
+	$("#answerTwo + label").empty().html(questionList[currentQuestion].answers[1]);
+	$("#answerThree + label").empty().html(questionList[currentQuestion].answers[2]);
+	$("#answerFour + label").empty().html(questionList[currentQuestion].answers[3]);
+//events
 	//onclick next
 	$(".next").click(function(){
 		var radioSelect = $('input:radio[name=answer]:checked').val();
 		var rightAnswer = questionList[currentQuestion].correct;
-		//console.log(rightAnswer);
+		console.log(rightAnswer);
 		if (radioSelect === undefined ){
-			//console.log("Error: make a selection");
+			console.log("Error: make a selection");
 			$('.message-no-guess').css('display', 'block');
 				}
 		else{
 			$('.message-no-guess').css('display', 'none');
-			//console.log("next, selected answer: " + radioSelect );
+			console.log("next, selected answer: " + radioSelect );
 			currentQuestion ++; 
 			if (radioSelect == rightAnswer ) {
 				numCorrect ++;
@@ -80,7 +86,7 @@ $(document).ready (function(){
 	$(document).keydown(function( event ){
 		if (event.which == 13){
 			event.preventDefault();
-			//console.log('enter key pressed');
+			console.log('enter key pressed');
 			//call click function
 			$('.next').click();
 			};
