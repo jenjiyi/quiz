@@ -73,3 +73,6 @@ header img{
 .progress{
 	float: right;
 }
+.summary{
+	color: #cc0000;
+}

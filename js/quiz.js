@@ -2,49 +2,49 @@ $(document).ready (function(){
 
 //questions object
 	var questionList = [{
-		questions: "What was her first band called??", 
+		questions: "1. What was her first band called??", 
 		answers:["The Adverts", "The Runaways", "Girlschool", "The Germs"],
 		qNum: 0,
 		correct: 1
 		},
 		{
-		questions:'Her song "Bad Reputation" was used as the opening theme song for which TV show?',
+		questions:'2. Her song "Bad Reputation" was used as the opening theme song for which TV show?',
 		answers:["Law and Order", "Girls", "Freaks and Geeks", "Beverly Hills: 90210"],
 		qNum: 1,
 		correct: 2
 		},
 		{
-		questions:'"Crimson and Clover" was originally by which band?',
+		questions:'3. "Crimson and Clover" was originally by which band?',
 		answers:["Tommy James and the Shondells", "The Pandoras", " The Eagles", "Screamin' Jay Hawkins"] ,
 		qNum: 2,
 		correct: 0
 		},
 		{
-		questions:"When were Joan Jett and the Blackhearts inducted into the Rock 'n Roll Hall of Fame?",		
+		questions:"4. When were Joan Jett and the Blackhearts inducted into the Rock 'n Roll Hall of Fame?",		
 		answers:["1999", "2001", "2013", "2015"],
 		qNum: 3,
 		correct: 3
 		},
 		{ 
-		questions:"Where was she born?",
+		questions:"5. Where was she born?",
 		answers:["Los Angeles, CA", "Cleveland, OH", "Philadelphia, PA", "New York, NY"],
 		qNum: 4,
 		correct: 2
 		},
 		{
-		questions: "What is her best selling LP?",
+		questions: "6. What is her best selling LP?",
 		answers:["Naked", "I Love Rock 'n' Roll", "Up Your Alley ", "Good Music"],
 		qNum: 5,
 		correct: 1
 		},
 		{ 
-		questions:"Which punk rock bands first album did she produce?",
+		questions:"7. Which punk rock bands first album did she produce?",
 		answers:["The Germs", "Agent Orange", "Fear", "Crime"],
 		qNum: 6,
 		correct: 0
 		},
 		{
-		questions:"Which band let her using their recording studio for her first solo album?",
+		questions:"8. Which band let her using their recording studio for her first solo album?",
 		answers:["Heart", "The Sex Pistols", "Alice Cooper", "The Who"],
 		qNum: 7,
 		correct: 3
@@ -74,13 +74,18 @@ $(document).ready (function(){
 			currentQuestion ++; 
 			if (radioSelect == rightAnswer ) {
 				numCorrect ++;
-				console.log("correct!" + numCorrect);
-			}
+				console.log("correct! " + numCorrect);
+				$(".summary").append("Right answer!");
+				}
 			//else do nothing 
-			else { };
-			//populate next question function
-			nextQuestion();
-			} 
+			else {
+				$(".summary").append("Wrong answer");
+				} 
+				//populate next question function
+			 	setTimeout(nextQuestion, 1000);
+			};
+			
+			
 	});
 	//enter key
 	$(document).keydown(function( event ){
@@ -108,6 +113,8 @@ $(document).ready (function(){
 			$("#answerThree + label").empty().html(questionList[currentQuestion].answers[2]);
 			$("#answerFour + label").empty().html(questionList[currentQuestion].answers[3]);
 			$(".hearts").empty();
+			$(".summary").empty();
+			
 		}
 	}
 
